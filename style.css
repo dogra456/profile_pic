@@ -1,0 +1,173 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+/*         @imp This is a special comment in CSS */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #1c1c1c;
+            padding: 20px;
+            
+            border: 2px solid #333333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3); /* Light shadow */
+        }
+        form {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        form h1 {
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+        form h1 span {
+/*            color: rgba(0, 0, 255, 1.0);*/
+            color:#0a5c36 ;
+        }
+        
+        form input[type="file"],
+        form input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            color: #000000; /* Black text */
+            background-color: #e0e0e0; /* Light gray background */
+            border: 1px solid #cccccc; /* Light gray border */
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #0a5c36;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0a5c31;
+        }
+        .profile-img {
+            position: relative; /* Added relative positioning */
+            width: 200px; 
+            height: 200px;
+            overflow: hidden; 
+            border-radius: 50%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; 
+            cursor: pointer; /* Add pointer cursor to indicate clickable */
+        }
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .camera-icon {
+            position: relative;
+            bottom: 50px;
+            right: -50px ;
+            background-color:  #0a5c36;
+            color: white;
+            display: inline-block;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+        .camera-icon:hover {
+            background-color: #0a5c36;
+        }
+        
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 60%;
+            border: 1px solid #eee;
+        }
+        .modal img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #f1f1f1;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+/*     tootlip   */
+.tooltip2 {
+    position: absolute;
+    bottom: 125%; /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 12px;
+    z-index: 10; /* Ensure tooltip is above other content */
+}
+
+/* Tooltip arrow */
+.tooltip2::before {
+    content: '';
+    position: absolute;
+    bottom: 100%; /* Position the arrow above the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+/* Show tooltip on hover */
+.camera-icon:hover .tooltip2 {
+    opacity: 1;
+    visibility: visible;
+}
